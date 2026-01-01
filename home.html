@@ -1,0 +1,129 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME - HSLI Saudi Airlines</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0b3d2e; /* Dark Green */
+            margin: 0;
+            direction: ltr;
+        }
+
+        /* Top navbar */
+        .navbar {
+            background-color: #006c35;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar span {
+            color: #ccc;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .navbar .active {
+            color: white;
+            font-weight: bold;
+        }
+
+        /* Container */
+        .container {
+            width: 350px;
+            margin: 60px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+
+        img {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 25px;
+            background-color: #006c35;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #004f27;
+        }
+
+        .social-media {
+            margin-top: 10px;
+        }
+
+        .social-media a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="Login.html" style="text-decoration: none;"><span>LOGIN</span></a>
+        <span class="active">HOME</span>
+    </div>
+
+    <div class="container">
+        <img src="logo.png" alt="Saudi Airlines Logo">
+
+        <input type="text" id="fromCity" placeholder="From">
+        <input type="text" id="toCity" placeholder="To">
+
+        <input type="date" id="travelDate">
+
+        <button onclick="submitForm()">Submit</button>
+    </div>
+
+    <footer style="background-color: #006c35; color: white; text-align: center; padding: 15px; position: fixed; bottom: 0; width: 100%;">
+        <div class="social-media">
+            <a href="#">X (Twitter)</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <p style="margin-top: 10px; font-size: 12px;">© Saudi Airlines</p>
+    </footer>
+
+    <script>
+        function submitForm() {
+           
+            var from = document.getElementById('fromCity').value;
+            var to = document.getElementById('toCity').value;
+
+            if(from == "" || to == "") {
+                alert("Please fill in all fields!");
+            } else {
+                
+                alert("Success! Your flight request from " + from + " to " + to + " has been submitted.");
+            }
+        }
+    </script>
+
+</body>
+</html>
